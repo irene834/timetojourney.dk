@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "ITC American Typewriter Pro Light", "American Typewriter", "Courier New", serif;
+  --font-sans: "Keiss Text", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Playfair Display", serif;
+  
+  /* Belmond Inspired Palette */
+  --color-paper: #FAF9F6;
+  --color-ink: #1C1C1C;
+  --color-sand: #EBE5DB;
+  
+  /* Brand Specific Accents */
+  --color-sky: #98b9d1; /* Denmark */
+  --color-sun: #f2c94c; /* Sicily */
+  --color-prosper: #e67e22; /* Prosper */
+  --color-flourish: #d9a7a7; /* Flourish */
+  --color-gold: #C3A078; /* Champagne Gold */
+}
+
+@layer base {
+  body {
+    @apply bg-paper text-ink selection:bg-gold/20 selection:text-ink font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, .serif {
+    @apply font-serif;
+  }
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.mask-oval {
+  clip-path: ellipse(50% 50% at 50% 50%);
+}
+
+.scandi-border {
+  @apply border border-ink/10;
+}
+
+.vertical-text {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+.editorial-line {
+  @apply h-px w-full bg-ink/10 my-12;
+}
+
+.luxury-card {
+  @apply bg-paper border border-ink/5 transition-all duration-700 hover:border-gold/40 hover:shadow-xl rounded-sm;
+}
